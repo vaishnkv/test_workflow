@@ -6,6 +6,7 @@ app = Flask(__name__)
 @app.route('/get_pod_id', methods=['GET'])
 def get_pod_id():
     ## return back the pod_id
+    print("Got a request")
     pod_id = socket.gethostname()
     return f"<html><body><h1>Pod ID: {pod_id}</h1></body></html>"
 
